@@ -6,6 +6,11 @@
     <h1>
         create your article
     </h1>
+    <form action="site-form" action="{% url 'articles:create' %}" method="POST">
+        {{form}}
+        {% csrf_token %}
+        <input type="submit" value="create">
+    </form>
 </div>
 
 {% endblock %}
